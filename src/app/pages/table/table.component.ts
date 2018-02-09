@@ -1,5 +1,6 @@
 import { Equip } from './../../data/equip';
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-table',
@@ -12,7 +13,7 @@ export class TableComponent implements OnInit {
   chosenEquip = new Map<string, any>();
   bonusEquip = new Map<string, number>();
 
-  constructor() { }
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit() {
   }
