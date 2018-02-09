@@ -1,3 +1,5 @@
+export class Equip {
+    public static equip =
 [
     {
        "name": "Leather a",
@@ -8270,4 +8272,5 @@
           }
        ]
     }
- ]
+ ];
+}

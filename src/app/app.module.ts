@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { BonusDetailComponent } from './components/bonus-detail/bonus-detail.component';
 
-import { MzButtonModule } from 'ng2-materialize'
+import { MzButtonModule } from 'ng2-materialize';
+import { TableComponent } from './pages/table/table.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterComponent,
-    BonusDetailComponent
+    BonusDetailComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
