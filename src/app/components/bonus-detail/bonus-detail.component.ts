@@ -17,6 +17,7 @@ export class BonusDetailComponent implements OnInit {
   ngOnInit() {
     this.sharedService.chosenEquipEvent$.subscribe(
       data => {
+        this.chosenEquip = data;
         console.log(data);
         //this.calcBonus();
       }
