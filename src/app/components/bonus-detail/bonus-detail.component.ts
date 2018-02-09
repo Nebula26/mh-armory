@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SharedService } from '@angular/core';
 
 @Component({
   selector: 'app-bonus-detail',
@@ -8,11 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BonusDetailComponent implements OnInit {
 
   @Input() chosenEquip;
+  bonusEquip = new Map<string, number>();
 
-  helmBonus: string;
-   
-
-  constructor() { }
+  constructor(private sharedService:SharedService) {
+    this.sharedService.calcBonusEvent$.subscribe(
+      data => {
+        //chiama func
+      }
+    )
+  }
 
   ngOnInit() {
   }
