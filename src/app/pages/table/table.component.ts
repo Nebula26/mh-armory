@@ -10,6 +10,7 @@ export class TableComponent implements OnInit {
 
   armor = Equip.equip;
   chosenEquip = [];
+  bonusEquip = new Map<string, number>();
 
   constructor() { }
 
@@ -23,6 +24,22 @@ export class TableComponent implements OnInit {
       }
     }
     this.chosenEquip.push(eq);
-    console.log(this.chosenEquip)
+    this.calcBonus();
+  }
+
+  calcBonus(){
+    this.bonusEquip = new Map<string, number>();
+    for (let equip of this.chosenEquip) {
+      for (let bonus of equip.bonus) {
+        if(!this.bonusEquip.has(bonus.name)){
+          this.bonusEquip.set(bonus.name, bonus.value);
+        }else{
+          let value = this.bonusEquip.get(bonus.name);
+          value += bonus.value;
+          this.bonusEquip.set(bonus.name, value);
+        }
+      }
+    }
+    console.log(this.bonusEquip);
   }
 }
