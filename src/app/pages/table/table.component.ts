@@ -29,7 +29,8 @@ export class TableComponent implements OnInit {
     if(add){
       this.chosenEquip.set(eq.name, eq);
     }
-    console.log(this.chosenEquip);
+    
+    this.sharedService.publishCalcBonusEvent();
   }
 
   remove(eq){
