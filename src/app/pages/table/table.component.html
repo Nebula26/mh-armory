@@ -1,14 +1,12 @@
-
-
-<table class="bordered highlight">
+<table class="highlight">
   <thead>
     <tr>
-        <th>Name</th>
-        <th>Helm</th>
-        <th>Chest</th>
-        <th>Hands</th>
-        <th>Legs</th>
-        <th>Boots</th>
+        <th class="center">Name</th>
+        <th class="center">Helm</th>
+        <th class="center">Chest</th>
+        <th class="center">Hands</th>
+        <th class="center">Legs</th>
+        <th class="center">Boots</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +15,16 @@
       <td *ngFor="let eq of armor.equip" (click)="add(eq)">
         <div *ngFor="let bonus of eq.bonus">
           {{bonus.name}} {{bonus.value}} <br>
+        </div><br>
+        <div class="row row--no-margin">
+          <div class="col s4 center">{{eq.socket.small}}</div>
+          <div class="col s4 center">{{eq.socket.medium}}</div>
+          <div class="col s4 center">{{eq.socket.big}}</div>
+        </div>
+        <div class="row row--no-margin">
+          <div class="col s4 center text-11">Small</div>
+          <div class="col s4 center text-11">Medium</div>
+          <div class="col s4 center text-11">Large</div>
         </div>
       </td>
     </tr>

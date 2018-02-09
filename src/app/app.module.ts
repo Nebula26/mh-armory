@@ -8,6 +8,7 @@ import { BonusDetailComponent } from './components/bonus-detail/bonus-detail.com
 
 import { MzButtonModule } from 'ng2-materialize';
 import { TableComponent } from './pages/table/table.component'
+import { MzNavbarModule } from 'ng2-materialize'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TableComponent } from './pages/table/table.component'
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MzButtonModule
+    MzButtonModule,
+    MzNavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
