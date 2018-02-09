@@ -6,10 +6,10 @@ export class SharedService {
 
   constructor() { }
 
-  private calcBonusEvent = new Subject<any>();
-  calcBonusEvent$ = this.calcBonusEvent.asObservable();
-  publishCalcBonusEvent() {
-    console.log("publishCalcBonusEvent");
-    this.calcBonusEvent.next();
+  private chosenEquipEvent = new Subject<any>();
+  chosenEquipEvent$ = this.chosenEquipEvent.asObservable();
+  publishChosenEquipEvent(data: any) {
+    console.log("publishChosenEquipEvent");
+    this.chosenEquipEvent.next();
   }
 }
