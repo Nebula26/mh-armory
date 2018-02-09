@@ -14,9 +14,11 @@
       <td>{{armor.name}}</td>
       <td *ngFor="let eq of armor.equip" (click)="toggle(eq)"
         [ngClass]="{'grey lighten-2' : chosenEquip.has(eq.name) && chosenEquip.get(eq.name).id == eq.id}">
-        <div *ngFor="let bonus of eq.bonus">
-          {{bonus.name}} {{bonus.value}} <br>
-        </div><br>
+          <div *ngFor="let bonus of eq.bonus">
+              <ng-container *ngIf="bonus.name">
+                {{bonus.name}} {{bonus.value}}
+              </ng-container>
+          </div>
         <div class="row row--no-margin">
           <div class="col s4 center">{{eq.socket.small}}</div>
           <div class="col s4 center">{{eq.socket.medium}}</div>
