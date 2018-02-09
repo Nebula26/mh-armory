@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class TableComponent implements OnInit {
 
   armor = Equip.equip;
-  chosenEquip = [];
+  chosenEquip = new Map<string, any>();
   bonusEquip = new Map<string, number>();
 
   constructor() { }
@@ -18,28 +18,29 @@ export class TableComponent implements OnInit {
   }
 
   add(eq){
-    for(let i = 0; i < this.chosenEquip.length; i++){
-      if(this.chosenEquip[i].name == eq.name){
-        this.chosenEquip.splice(i,1);
-      }
+    if(!this.bonusEquip.has(eq.name)){
+      this.chosenEquip.delete(eq.name);
     }
-    this.chosenEquip.push(eq);
+    this.chosenEquip.set(eq.name, eq);
     this.calcBonus();
   }
 
   calcBonus(){
     this.bonusEquip = new Map<string, number>();
-    for (let equip of this.chosenEquip) {
-      for (let bonus of equip.bonus) {
-        if(!this.bonusEquip.has(bonus.name)){
-          this.bonusEquip.set(bonus.name, bonus.value);
-        }else{
-          let value = this.bonusEquip.get(bonus.name);
-          value += bonus.value;
-          this.bonusEquip.set(bonus.name, value);
+    this.chosenEquip.forEach((equip, name) =>
+      {
+        for (let bonus of equip.bonus) {
+          if(!this.bonusEquip.has(bonus.name)){
+            this.bonusEquip.set(bonus.name, bonus.value);
+          }else{
+            let value = this.bonusEquip.get(bonus.name);
+            value += bonus.value;
+            this.bonusEquip.set(bonus.name, value);
+          }
         }
       }
-    }
+    );
+  
     console.log(this.bonusEquip);
   }
 }
