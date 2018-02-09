@@ -8,11 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  equip = Equip.equip;
+  armor = Equip.equip;
+  chosenEquip = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  add(eq){
+    for(let i = 0; i < this.chosenEquip.length; i++){
+      if(this.chosenEquip[i].name == eq.name){
+        this.chosenEquip.splice(i,1);
+      }
+    }
+    this.chosenEquip.push(eq);
+    console.log(this.chosenEquip)
+  }
 }

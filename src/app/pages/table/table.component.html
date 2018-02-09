@@ -2,26 +2,21 @@
   <thead>
     <tr>
         <th>Name</th>
-        <th>Item Name</th>
-        <th>Item Price</th>
+        <th>Helm</th>
+        <th>Chest</th>
+        <th>Hands</th>
+        <th>Legs</th>
+        <th>Boots</th>
     </tr>
   </thead>
-
   <tbody>
-    <tr>
-      <td>Alvin</td>
-      <td>Eclair</td>
-      <td>$0.87</td>
-    </tr>
-    <tr>
-      <td>Alan</td>
-      <td>Jellybean</td>
-      <td>$3.76</td>
-    </tr>
-    <tr>
-      <td>Jonathan</td>
-      <td>Lollipop</td>
-      <td>$7.00</td>
+    <tr *ngFor="let armor of armor">
+      <td>{{armor.name}}</td>
+      <td *ngFor="let eq of armor.equip" (click)="add(eq)">
+        <div *ngFor="let bonus of eq.bonus">
+          {{bonus.name}} {{bonus.value}} <br>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
