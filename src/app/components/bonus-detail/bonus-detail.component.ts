@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, SharedService } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-bonus-detail',
@@ -11,14 +12,15 @@ export class BonusDetailComponent implements OnInit {
   bonusEquip = new Map<string, number>();
 
   constructor(private sharedService:SharedService) {
-    this.sharedService.calcBonusEvent$.subscribe(
-      data => {
-        //chiama func
-      }
-    )
   }
 
   ngOnInit() {
+    this.sharedService.chosenEquipEvent$.subscribe(
+      data => {
+        console.log(data);
+        //this.calcBonus();
+      }
+    )
   }
 
   calcBonus(){
@@ -39,6 +41,4 @@ export class BonusDetailComponent implements OnInit {
 
     console.log(this.bonusEquip);
   }
-}
-
 }
