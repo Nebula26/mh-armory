@@ -1,0 +1,22 @@
+.mh-detail-row {
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+}
+
+.mh-detail-row:last-child {
+  border-bottom: 2px solid #fff;
+}
+
+.mh-detail-row .col {
+  padding: 0;
+}
+
+.mh-total-row {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.mh-total-row .col {
+  padding: 0;
+}
