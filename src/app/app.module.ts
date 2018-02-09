@@ -9,6 +9,7 @@ import { BonusDetailComponent } from './components/bonus-detail/bonus-detail.com
 import { MzButtonModule } from 'ng2-materialize';
 import { TableComponent } from './pages/table/table.component'
 import { MzNavbarModule } from 'ng2-materialize'
+import { SharedService } from './services/shared.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { MzNavbarModule } from 'ng2-materialize'
     MzButtonModule,
     MzNavbarModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
