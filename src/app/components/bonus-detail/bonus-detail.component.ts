@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bonus-detail',
@@ -7,9 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BonusDetailComponent implements OnInit {
 
+  @Input() chosenEquip;
+
+  helmBonus: string;
+   
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  calcBonus(){
+    this.bonusEquip = new Map<string, number>();
+    this.chosenEquip.forEach((equip, name) =>
+      {
+        for (let bonus of equip.bonus) {
+          if(!this.bonusEquip.has(bonus.name)){
+            this.bonusEquip.set(bonus.name, bonus.value);
+          }else{
+            let value = this.bonusEquip.get(bonus.name);
+            value += bonus.value;
+            this.bonusEquip.set(bonus.name, value);
+          }
+        }
+      }
+    );
+
+    console.log(this.bonusEquip);
+  }
+}
 
 }
