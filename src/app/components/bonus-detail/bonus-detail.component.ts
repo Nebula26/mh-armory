@@ -9,7 +9,9 @@ import { SharedService } from '../../services/shared.service';
 export class BonusDetailComponent implements OnInit {
 
   @Input() chosenEquip;
-  bonusEquip = new Map<string, number>();
+  bonusEquip = undefined;
+  filterKeys: Array;
+  bonusKey: Array;
 
   constructor(private sharedService:SharedService) {
   }
@@ -18,8 +20,9 @@ export class BonusDetailComponent implements OnInit {
     this.sharedService.chosenEquipEvent$.subscribe(
       data => {
         this.chosenEquip = data;
-        console.log(data);
-        //this.calcBonus();
+        this.filterKeys = Array.from(this.chosenEquip.keys());
+        this.calcBonus();
+        this.bonusKey = Array.from(this.bonusEquip.keys());
       }
     )
   }

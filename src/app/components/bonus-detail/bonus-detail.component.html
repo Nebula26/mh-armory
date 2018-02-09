@@ -3,38 +3,21 @@
     <div class="card red darken-4 hoverable">
       <div class="card-content white-text">
         <span class="card-title">Bonus</span>
-        <div>
-          <div class="row mh-detail-row">
-            <div class="col s6">Helm:</div>
+        <div *ngIf="chosenEquip !== undefined">
+          <div *ngFor="let key of filterKeys" class="row mh-detail-row">
+            <div class="col s6">{{key}}:</div>
             <div class="col s6">
-              <div *ngFor="bonus of chosenEquip.helm.bonus"></div>
+                <div *ngFor="let bonus of chosenEquip.get(key).bonus">{{bonus.name}} +{{bonus.value}}</div>
             </div>
-          </div>
-          <div class="row mh-detail-row">
-            <div class="col s6">Chest:</div>
-            <div class="col s6">{{chestBonus}}</div>
-          </div>
-          <div class="row mh-detail-row">
-            <div class="col s6">Hands:</div>
-            <div class="col s6">{{handsBonus}}</div>
-          </div>
-          <div class="row mh-detail-row">
-            <div class="col s6">Legs:</div>
-            <div class="col s6">{{legsBonus}}</div>
-          </div>
-          <div class="row mh-detail-row">
-            <div class="col s6">Boots:</div>
-            <div class="col s6">{{bootsBonus}}</div>
           </div>
         </div>
         <div>
           <div class="row mh-total-row">
             <div class="col s6"></div>
             <div class="col s6">
-              Bonus1 +3<br>
-              Bonus2 +3<br>
-              Bonus3 +2<br>
-              Bonus4 +1<br>
+              <div *ngIf="bonusEquip !== undefined">
+                <div *ngFor="let key of bonusKey" class="row mh-detail-row">{{key}} +{{bonusEquip.get(key)}}</div>
+              </div>
             </div>
           </div>
         </div>
