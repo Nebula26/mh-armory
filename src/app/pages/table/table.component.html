@@ -12,7 +12,8 @@
   <tbody>
     <tr *ngFor="let armor of armor">
       <td>{{armor.name}}</td>
-      <td *ngFor="let eq of armor.equip" (click)="add(eq)">
+      <td *ngFor="let eq of armor.equip" (click)="toggle(eq)"
+        [ngClass]="{'grey lighten-2' : chosenEquip.has(eq.name) && chosenEquip.get(eq.name).id == eq.id}">
         <div *ngFor="let bonus of eq.bonus">
           {{bonus.name}} {{bonus.value}} <br>
         </div><br>

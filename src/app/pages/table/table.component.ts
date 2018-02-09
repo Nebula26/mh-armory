@@ -17,11 +17,24 @@ export class TableComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(eq){
-    if(!this.bonusEquip.has(eq.name)){
+
+
+  toggle(eq){
+    let add = true;
+    if(this.chosenEquip.has(eq.name)){
+      if(this.chosenEquip.get(eq.name).id == eq.id){
+        add = false;
+      }
       this.chosenEquip.delete(eq.name);
     }
-    this.chosenEquip.set(eq.name, eq);
+    if(add){
+      this.chosenEquip.set(eq.name, eq);
+    }
+    this.calcBonus();
+  }
+
+  remove(eq){
+    this.chosenEquip.delete(eq.name);
     this.calcBonus();
   }
 
