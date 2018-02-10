@@ -39,12 +39,14 @@ export class BonusDetailComponent implements OnInit {
     this.chosenEquip.forEach((equip, name) =>
       {
         for (let bonus of equip.bonus) {
-          if(!this.bonusEquip.has(bonus.name)){
-            this.bonusEquip.set(bonus.name, bonus.value);
-          }else{
-            let value = this.bonusEquip.get(bonus.name);
-            value += bonus.value;
-            this.bonusEquip.set(bonus.name, value);
+          if(bonus.name){
+            if(!this.bonusEquip.has(bonus.name)){
+              this.bonusEquip.set(bonus.name, bonus.value);
+            }else{
+              let value = this.bonusEquip.get(bonus.name);
+              value += bonus.value;
+              this.bonusEquip.set(bonus.name, value);
+            }
           }
         }
       }
