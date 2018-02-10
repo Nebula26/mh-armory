@@ -25,7 +25,7 @@
           <div class="col s12">
             <div *ngFor="let key of bonusKey" class="row mh-detail-row">
               <ng-container *ngIf="key.indexOf('GEM_') > -1; else bonus_content">
-                    <img src="assets/{{getImageFromSocket(key)}}"> {{bonus.value}}
+                    <img src="assets/{{getImageFromSocket(key)}}"> {{bonusEquip.get(key)}}
               </ng-container>
               <ng-template #bonus_content>
                   {{key}} +{{bonusEquip.get(key)}}
