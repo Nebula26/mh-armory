@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: url("http://www.monsterhunterworld.com/images/common/bg_page.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .mh-container {
   max-width: 1280px;
   margin: auto;
@@ -15,23 +31,4 @@ p {
 
 .row.row--no-margin {
   margin: 0;
-}
-
-table {
-  margin-top: .5rem;
-}
-
-thead th {
-  border-top: 1px solid #d0d0d0;
-  border-right: 1px solid #d0d0d0;
-  border-left: 1px solid #d0d0d0;
-}
-
-tbody tr {
-  border-bottom: 1px solid #d0d0d0;
-}
-
-tbody td {
-  border-left: 1px solid #d0d0d0;
-  border-right: 1px solid #d0d0d0;
 }

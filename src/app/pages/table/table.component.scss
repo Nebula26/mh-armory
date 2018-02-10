@@ -1,0 +1,35 @@
+.card-content--table {
+  padding: 0;
+  max-height: calc(100vH - 110px);
+  overflow-y: auto;
+
+  table {
+    margin-top: .5rem;
+  }
+
+ thead  {
+   th {
+     border-bottom: 1px solid #eeeeee;
+   }
+  }
+
+ tbody {
+   margin-top: 40px;
+   tr {
+     border-bottom: 1px solid #eeeeee;
+   }
+
+   td {
+     border-left: 1px solid #eeeeee;
+     border-right: 1px solid #eeeeee;
+
+     &:first-child {
+       border-left: 0;
+     }
+
+     &:last-child {
+       border-right: 0;
+     }
+   }
+ }
+}
