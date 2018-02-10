@@ -103,7 +103,7 @@ export class Equip {
                  "name": "chest",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
@@ -118,7 +118,7 @@ export class Equip {
                  "name": "hands",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
@@ -133,7 +133,7 @@ export class Equip {
                  "name": "legs",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
@@ -148,7 +148,7 @@ export class Equip {
                  "name": "boots",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
@@ -267,7 +267,7 @@ export class Equip {
                  "name": "chest",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
@@ -282,7 +282,7 @@ export class Equip {
                  "name": "hands",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
@@ -297,7 +297,7 @@ export class Equip {
                  "name": "legs",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
@@ -312,7 +312,7 @@ export class Equip {
                  "name": "boots",
                  "bonus": [
                     {
-                       "name": "-",
+                       "name": "",
                        "value": 1
                     }
                  ],
