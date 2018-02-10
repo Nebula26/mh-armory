@@ -1,38 +1,42 @@
-<table class="highlight">
-  <thead>
-    <tr>
-        <th class="center">Name</th>
-        <th class="center">Helm</th>
-        <th class="center">Chest</th>
-        <th class="center">Hands</th>
-        <th class="center">Legs</th>
-        <th class="center">Boots</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let armor of armor">
-      <td>{{armor.name}}</td>
-      <td *ngFor="let eq of armor.equip" (click)="armor.name != 'x' && toggle(eq)"
-        [ngClass]="{'grey lighten-2' : chosenEquip.has(eq.name) && chosenEquip.get(eq.name).id == eq.id}">
-          <div *ngFor="let bonus of eq.bonus">
-              <ng-container *ngIf="bonus.name && bonus.name != 'x'">
-                {{bonus.name}} {{bonus.value}}
-              </ng-container>
-              <ng-container *ngIf="!bonus.name">
-                 - No bonus -
-              </ng-container>
-          </div>
-        <div class="row row--no-margin">
-          <div class="col s4 center">{{eq.socket.small}}</div>
-          <div class="col s4 center">{{eq.socket.medium}}</div>
-          <div class="col s4 center">{{eq.socket.big}}</div>
-        </div>
-        <div class="row row--no-margin">
-          <div class="col s4 center text-11">Small</div>
-          <div class="col s4 center text-11">Medium</div>
-          <div class="col s4 center text-11">Large</div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="card hoverable">
+  <div class="card-content card-content--table">
+    <table class="highlight">
+      <thead>
+        <tr>
+            <th class="center">Name</th>
+            <th class="center">Helm</th>
+            <th class="center">Chest</th>
+            <th class="center">Hands</th>
+            <th class="center">Legs</th>
+            <th class="center">Boots</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let armor of armor">
+          <td>{{armor.name}}</td>
+          <td *ngFor="let eq of armor.equip" (click)="armor.name != 'x' && toggle(eq)"
+            [ngClass]="{'grey lighten-2' : chosenEquip.has(eq.name) && chosenEquip.get(eq.name).id == eq.id}">
+              <div *ngFor="let bonus of eq.bonus">
+                  <ng-container *ngIf="bonus.name && bonus.name != 'x'">
+                    {{bonus.name}} {{bonus.value}}
+                  </ng-container>
+                  <ng-container *ngIf="!bonus.name">
+                     - No bonus -
+                  </ng-container>
+              </div>
+            <div class="row row--no-margin">
+              <div class="col s4 center">{{eq.socket.small}}</div>
+              <div class="col s4 center">{{eq.socket.medium}}</div>
+              <div class="col s4 center">{{eq.socket.big}}</div>
+            </div>
+            <div class="row row--no-margin">
+              <div class="col s4 center text-11">Small</div>
+              <div class="col s4 center text-11">Medium</div>
+              <div class="col s4 center text-11">Large</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
