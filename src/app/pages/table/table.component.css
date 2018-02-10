@@ -1,11 +1,5 @@
 .card-content--table {
   padding: 0;
-  max-height: calc(100vH - 110px);
-  overflow-y: auto;
-}
-
-.card-content--table table {
-  margin-top: .5rem;
 }
 
 .card-content--table thead th {

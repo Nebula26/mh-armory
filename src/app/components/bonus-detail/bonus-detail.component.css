@@ -1,3 +1,8 @@
+.mh-bonus-detail {
+  position: fixed;
+  width: 33.3333333333%;
+}
+
 .mh-detail-row {
   margin: 0;
   padding: 5px 0;
