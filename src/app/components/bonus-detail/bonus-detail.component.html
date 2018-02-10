@@ -1,9 +1,9 @@
 <div class="row row--no-margin">
   <div class="col s12">
-    <div class="card red darken-4 hoverable">
-      <div class="card-content white-text">
-        <span class="card-title">Bonus</span>
-        <div *ngIf="chosenEquip !== undefined">
+    <div *ngIf="chosenEquip !== undefined">
+      <div class="card red darken-4 hoverable">
+        <div class="card-content white-text">
+          <span class="card-title">Bonus</span>
           <div *ngFor="let key of filterKeys" class="row mh-detail-row">
             <div class="col s6">{{key}}:</div>
             <div class="col s6">
@@ -11,13 +11,16 @@
             </div>
           </div>
         </div>
-        <div>
+      </div>
+    </div>
+
+    <div *ngIf="bonusEquip !== undefined">
+      <div class="card red darken-4 hoverable">
+        <div class="card-content white-text">
+          <span class="card-title">Total</span>
           <div class="row mh-total-row">
-            <div class="col s6"></div>
-            <div class="col s6">
-              <div *ngIf="bonusEquip !== undefined">
-                <div *ngFor="let key of bonusKey" class="row mh-detail-row">{{key}} +{{bonusEquip.get(key)}}</div>
-              </div>
+            <div class="col s12">
+              <div *ngFor="let key of bonusKey" class="row mh-detail-row">{{key}} +{{bonusEquip.get(key)}}</div>
             </div>
           </div>
         </div>
