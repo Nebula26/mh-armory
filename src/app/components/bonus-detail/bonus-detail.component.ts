@@ -8,6 +8,11 @@ import { SharedService } from '../../services/shared.service';
 })
 export class BonusDetailComponent implements OnInit {
 
+  static SOCKET_SMALL = 'SOCKET_SMALL';
+  static SOCKET_MEDIUM = 'SOCKET_MEDIUM';
+  static SOCKET_LARGE = 'SOCKET_LARGE';
+
+
   @Input() chosenEquip;
   bonusEquip = undefined;
   filterKeys: Array<string>;
@@ -36,6 +41,10 @@ export class BonusDetailComponent implements OnInit {
 
   calcBonus(){
     this.bonusEquip = new Map<string, number>();
+    this.bonusEquip.set("SOCKET_SMALL", 0)
+    this.bonusEquip.set("SOCKET_MEDIUM", 0)
+    this.bonusEquip.set("SOCKET_LARGE", 0)
+
     this.chosenEquip.forEach((equip, name) =>
       {
         for (let bonus of equip.bonus) {
@@ -49,7 +58,16 @@ export class BonusDetailComponent implements OnInit {
             }
           }
         }
+        this.calcSocket(BonusDetailComponent.SOCKET_SMALL, equip.socket.small);
+        this.calcSocket(BonusDetailComponent.SOCKET_MEDIUM, equip.socket.medium);
+        this.calcSocket(BonusDetailComponent.SOCKET_LARGE, equip.socket.big);
       }
     );
+  }
+
+  calcSocket(socketType, socketValue){
+    let value = this.bonusEquip.get(socketType);
+    value += socketValue
+    this.bonusEquip.set(socketType, value);
   }
 }
