@@ -2,6 +2,7 @@
 .mh-container {
   max-width: 1280px;
   margin: auto;
+  padding-top: 20px;
 }
 
 p {
@@ -16,9 +17,14 @@ p {
   margin: 0;
 }
 
+table {
+  margin-top: .5rem;
+}
+
 thead th {
-  border-left: 1px solid #d0d0d0;
+  border-top: 1px solid #d0d0d0;
   border-right: 1px solid #d0d0d0;
+  border-left: 1px solid #d0d0d0;
 }
 
 tbody tr {
