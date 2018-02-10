@@ -10,8 +10,8 @@ export class BonusDetailComponent implements OnInit {
 
   @Input() chosenEquip;
   bonusEquip = undefined;
-  filterKeys: Array;
-  bonusKey: Array;
+  filterKeys: Array<string>;
+  bonusKey: Array<string>;
 
   constructor(private sharedService:SharedService) {
   }
