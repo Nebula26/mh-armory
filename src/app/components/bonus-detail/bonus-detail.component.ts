@@ -8,9 +8,9 @@ import { SharedService } from '../../services/shared.service';
 })
 export class BonusDetailComponent implements OnInit {
 
-  static SOCKET_SMALL = 'SOCKET_SMALL';
-  static SOCKET_MEDIUM = 'SOCKET_MEDIUM';
-  static SOCKET_LARGE = 'SOCKET_LARGE';
+  static GEM_SMALL = 'GEM_SMALL';
+  static GEM_MEDIUM = 'GEM_MEDIUM';
+  static GEM_LARGE = 'GEM_LARGE';
 
 
   @Input() chosenEquip;
@@ -41,9 +41,9 @@ export class BonusDetailComponent implements OnInit {
 
   calcBonus(){
     this.bonusEquip = new Map<string, number>();
-    this.bonusEquip.set("SOCKET_SMALL", 0)
-    this.bonusEquip.set("SOCKET_MEDIUM", 0)
-    this.bonusEquip.set("SOCKET_LARGE", 0)
+    this.bonusEquip.set("GEM_SMALL", 0)
+    this.bonusEquip.set("GEM_MEDIUM", 0)
+    this.bonusEquip.set("GEM_LARGE", 0)
 
     this.chosenEquip.forEach((equip, name) =>
       {
@@ -58,9 +58,9 @@ export class BonusDetailComponent implements OnInit {
             }
           }
         }
-        this.calcSocket(BonusDetailComponent.SOCKET_SMALL, equip.socket.small);
-        this.calcSocket(BonusDetailComponent.SOCKET_MEDIUM, equip.socket.medium);
-        this.calcSocket(BonusDetailComponent.SOCKET_LARGE, equip.socket.big);
+        this.calcSocket(BonusDetailComponent.GEM_SMALL, equip.socket.small);
+        this.calcSocket(BonusDetailComponent.GEM_MEDIUM, equip.socket.medium);
+        this.calcSocket(BonusDetailComponent.GEM_LARGE, equip.socket.big);
       }
     );
   }
@@ -69,5 +69,21 @@ export class BonusDetailComponent implements OnInit {
     let value = this.bonusEquip.get(socketType);
     value += socketValue
     this.bonusEquip.set(socketType, value);
+  }
+
+  getImageFromSocket(socketType){
+    let img = "";
+    switch(socketType){
+      case BonusDetailComponent.GEM_SMALL:
+        img = "gem_small.png";
+        break;
+      case BonusDetailComponent.GEM_MEDIUM:
+        img = "gem_medium.png";
+        break;
+      case BonusDetailComponent.GEM_LARGE:
+        img = "gem_large.png";
+        break;
+    }
+    return img;
   }
 }
