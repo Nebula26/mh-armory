@@ -1389,12 +1389,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1404,12 +1399,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1419,12 +1409,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1434,12 +1419,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1454,12 +1434,7 @@ export class Equip {
            "equip": [
               {
                  "name": "helm",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1469,12 +1444,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1503,12 +1473,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1518,12 +1483,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1538,12 +1498,7 @@ export class Equip {
            "equip": [
               {
                  "name": "helm",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1553,12 +1508,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1583,12 +1533,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1598,12 +1543,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1618,12 +1558,7 @@ export class Equip {
            "equip": [
               {
                  "name": "helm",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1633,12 +1568,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1648,12 +1578,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1663,12 +1588,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1702,12 +1622,7 @@ export class Equip {
            "equip": [
               {
                  "name": "helm",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1717,12 +1632,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1732,12 +1642,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1747,12 +1652,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1805,12 +1705,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1820,12 +1715,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1835,12 +1725,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1850,12 +1735,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1885,12 +1765,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1900,12 +1775,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1915,12 +1785,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -1930,12 +1795,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4221,12 +4081,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4236,12 +4091,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4251,12 +4101,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4266,12 +4111,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4301,12 +4141,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 1,
                     "medium": 0,
@@ -4316,12 +4151,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4331,12 +4161,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4346,12 +4171,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4366,12 +4186,7 @@ export class Equip {
            "equip": [
               {
                  "name": "helm",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4400,12 +4215,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4415,12 +4225,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4430,12 +4235,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4450,12 +4250,7 @@ export class Equip {
            "equip": [
               {
                  "name": "helm",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4480,12 +4275,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4495,12 +4285,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -4510,12 +4295,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5245,12 +5025,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5260,12 +5035,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5275,12 +5045,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5290,12 +5055,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5325,12 +5085,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5340,12 +5095,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5355,12 +5105,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -5370,12 +5115,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -7561,12 +7301,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -7576,12 +7311,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -7591,12 +7321,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -7606,12 +7331,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -8717,12 +8437,7 @@ export class Equip {
               },
               {
                  "name": "chest",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -8732,12 +8447,7 @@ export class Equip {
               },
               {
                  "name": "hands",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -8747,12 +8457,7 @@ export class Equip {
               },
               {
                  "name": "legs",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,
@@ -8762,12 +8467,7 @@ export class Equip {
               },
               {
                  "name": "boots",
-                 "bonus": [
-                    {
-                       "name": "x",
-                       "value": 1
-                    }
-                 ],
+                 "bonus": [],
                  "socket": {
                     "small": 0,
                     "medium": 0,

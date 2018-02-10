@@ -19,17 +19,19 @@ export class TableComponent implements OnInit {
   }
 
   toggle(eq){
-    let add = true;
-    if(this.chosenEquip.has(eq.name)){
-      if(this.chosenEquip.get(eq.name).id == eq.id){
-        add = false;
+    if(eq.bonus.length > 0){
+      let add = true;
+      if(this.chosenEquip.has(eq.name)){
+        if(this.chosenEquip.get(eq.name).id == eq.id){
+          add = false;
+        }
+        this.chosenEquip.delete(eq.name);
       }
-      this.chosenEquip.delete(eq.name);
+      if(add){
+        this.chosenEquip.set(eq.name, eq);
+      }
+      this.sharedService.publishChosenEquipEvent(this.chosenEquip);
     }
-    if(add){
-      this.chosenEquip.set(eq.name, eq);
-    }
-    this.sharedService.publishChosenEquipEvent(this.chosenEquip);
   }
 
   remove(eq){

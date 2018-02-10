@@ -12,11 +12,14 @@
   <tbody>
     <tr *ngFor="let armor of armor">
       <td>{{armor.name}}</td>
-      <td *ngFor="let eq of armor.equip" (click)="toggle(eq)"
+      <td *ngFor="let eq of armor.equip" (click)="armor.name != 'x' && toggle(eq)"
         [ngClass]="{'grey lighten-2' : chosenEquip.has(eq.name) && chosenEquip.get(eq.name).id == eq.id}">
           <div *ngFor="let bonus of eq.bonus">
-              <ng-container *ngIf="bonus.name">
+              <ng-container *ngIf="bonus.name && bonus.name != 'x'">
                 {{bonus.name}} {{bonus.value}}
+              </ng-container>
+              <ng-container *ngIf="!bonus.name">
+                 - No bonus -
               </ng-container>
           </div>
         <div class="row row--no-margin">
