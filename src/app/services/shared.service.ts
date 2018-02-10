@@ -9,7 +9,6 @@ export class SharedService {
   private chosenEquipEvent = new Subject<any>();
   chosenEquipEvent$ = this.chosenEquipEvent.asObservable();
   publishChosenEquipEvent(data: any) {
-    console.log("publishChosenEquipEvent");
     this.chosenEquipEvent.next(data);
   }
 }

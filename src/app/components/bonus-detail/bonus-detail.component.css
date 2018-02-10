@@ -5,7 +5,7 @@
 }
 
 .mh-detail-row:last-child {
-  border-bottom: 2px solid #fff;
+  border-bottom: 0;
 }
 
 .mh-detail-row .col {

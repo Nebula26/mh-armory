@@ -19,10 +19,17 @@ export class BonusDetailComponent implements OnInit {
   ngOnInit() {
     this.sharedService.chosenEquipEvent$.subscribe(
       data => {
-        this.chosenEquip = data;
-        this.filterKeys = Array.from(this.chosenEquip.keys());
-        this.calcBonus();
-        this.bonusKey = Array.from(this.bonusEquip.keys());
+        if(data.size > 0) {
+          this.chosenEquip = data;
+          this.filterKeys = Array.from(this.chosenEquip.keys());
+          this.calcBonus();
+          this.bonusKey = Array.from(this.bonusEquip.keys());
+        } else {
+          this.chosenEquip = undefined;
+          this.filterKeys = undefined;
+          this.bonusEquip = undefined;
+          this.bonusKey = undefined;
+        }
       }
     )
   }
@@ -42,7 +49,5 @@ export class BonusDetailComponent implements OnInit {
         }
       }
     );
-
-    console.log(this.bonusEquip);
   }
 }
