@@ -10,6 +10,8 @@ import { MzButtonModule } from 'ng2-materialize';
 import { TableComponent } from './pages/table/table.component'
 import { MzNavbarModule } from 'ng2-materialize'
 import { SharedService } from './services/shared.service';
+import { MzInputModule } from 'ng2-materialize';
+import { MzSelectModule } from 'ng2-materialize';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -31,6 +33,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     MzButtonModule,
     MzNavbarModule,
+    MzInputModule,
+    MzSelectModule,
     PerfectScrollbarModule
   ],
   providers: [

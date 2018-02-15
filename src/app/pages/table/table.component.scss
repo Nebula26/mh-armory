@@ -25,6 +25,9 @@
      &:last-child {
        border-right: 0;
      }
+     &.x-filtered {
+       background: green;
+     }
    }
  }
 }

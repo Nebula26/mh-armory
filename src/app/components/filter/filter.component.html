@@ -1,3 +1,15 @@
-<p>
-  filter works!
-</p>
+<form class="row">
+  <div class="input-field col s6">
+    <mz-input-container>
+      <input mz-input id="search" placeholder="Search..." type="text"  (keyup)="changeText($event)">
+    </mz-input-container>
+  </div>
+  <div class="input-field col s6">
+    <mz-select-container>
+      <select mz-select id="options-select" [placeholder]="'Select bonus'"  (change)="changeSelect($event)">
+        <option class="left circle">Hunter Resistance</option>
+        <option class="left circle">Fire Resistance</option>
+      </select>
+    </mz-select-container>
+  </div>
+</form>

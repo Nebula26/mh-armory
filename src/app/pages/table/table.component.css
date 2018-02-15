@@ -27,3 +27,7 @@
 .card-content--table tbody td:last-child {
   border-right: 0;
 }
+
+.card-content--table tbody td.x-filtered {
+  background: green;
+}

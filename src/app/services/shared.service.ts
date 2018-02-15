@@ -11,4 +11,10 @@ export class SharedService {
   publishChosenEquipEvent(data: any) {
     this.chosenEquipEvent.next(data);
   }
+
+  private filterEvent = new Subject<any>();
+  filterEvent$ = this.filterEvent.asObservable();
+  publishFilterEvent(data: any) {
+    this.filterEvent.next(data);
+  }
 }

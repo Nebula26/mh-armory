@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
+
 
 @Component({
   selector: 'app-filter',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
 
-  constructor() { }
+  private filter:Object = {
+    name : '',
+    bonus : ''
+  };
+
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit() {
+  }
+
+  changeText($event) {
+    this.filter.name = $event.target.value;
+    this.sharedService.publishFilterEvent(this.filter);
+  }
+
+  changeSelect($event) {
+    this.filter.bonus = $event.target.value;
+    this.sharedService.publishFilterEvent(this.filter);
   }
 
 }
