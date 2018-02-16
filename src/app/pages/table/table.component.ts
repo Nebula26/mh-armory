@@ -18,6 +18,7 @@ export class TableComponent implements OnInit {
   chosenEquip = new Map<string, any>();
   bonusEquip = new Map<string, number>();
   filter:Object;
+  //TODO SISTEMARE LA GESTIONE DELL'URL CHE FA SCHIFO E SPOSTARE EXPORT NEL DETAIL
   url: string = "http://localhost:4200/";
 
   constructor(private sharedService:SharedService, private route:ActivatedRoute) { }
@@ -57,6 +58,7 @@ export class TableComponent implements OnInit {
     this.chosenEquip.forEach((value, key) =>{
       eq[key] = value.id;
     });
+    this.url = "http://localhost:4200/";
     this.url += btoa(JSON.stringify(eq));
     this.urlModal.open();
   }
@@ -76,6 +78,8 @@ export class TableComponent implements OnInit {
         break;
       }
     }
+    this.sharedService.publishChosenEquipEvent(this.chosenEquip);
+
   }
 
   remove(eq){
