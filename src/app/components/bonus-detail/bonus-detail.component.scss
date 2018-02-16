@@ -34,4 +34,10 @@
   .card--no-margin-bottom {
     margin-bottom: 0;
   }
+  &-export{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
 }

@@ -44,3 +44,15 @@
     </table>
   </div>
 </div>
+
+<mz-modal #urlModal [options]="modalOptions">
+    <mz-modal-header>
+      Copy URL
+    </mz-modal-header>
+    <mz-modal-content>
+      <input [ngModel]="url" type="text" onClick="this.select()">
+    </mz-modal-content>
+    <mz-modal-footer>
+      <button mz-button [flat]="true" mz-modal-close>Close</button>
+    </mz-modal-footer>
+</mz-modal>

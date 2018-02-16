@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { BonusDetailComponent } from './components/bonus-detail/bonus-detail.component';
 
-import { MzButtonModule } from 'ng2-materialize';
+import { MzButtonModule, MzModalModule, MzIconModule, MzIconMdiModule } from 'ng2-materialize';
 import { TableComponent } from './pages/table/table.component'
 import { MzNavbarModule } from 'ng2-materialize'
 import { SharedService } from './services/shared.service';
@@ -17,6 +17,7 @@ import { MzSelectModule } from 'ng2-materialize';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { FormsModule } from '@angular/forms';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -37,6 +38,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MzInputModule,
     MzSelectModule,
     PerfectScrollbarModule,
+    MzModalModule,
+    FormsModule,
+    MzIconModule, 
+    MzIconMdiModule,
     routing
   ],
   providers: [
