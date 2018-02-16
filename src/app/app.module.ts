@@ -1,3 +1,4 @@
+import { routing } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -35,7 +36,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MzNavbarModule,
     MzInputModule,
     MzSelectModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    routing
   ],
   providers: [
     SharedService,
