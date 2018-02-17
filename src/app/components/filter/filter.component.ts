@@ -19,10 +19,10 @@ export class FilterComponent implements OnInit {
   ngOnInit() {
   }
 
-  // changeText($event) {
-  //   this.filter.name = $event.target.value;
-  //   this.sharedService.publishFilterEvent(this.filter);
-  // }
+   changeText($event) {
+     this.filter.name = $event.target.value;
+     this.sharedService.publishFilterEvent(this.filter);
+   }
 
   // changeSelect($event) {
   //   this.filter.bonus = $event.target.value;
