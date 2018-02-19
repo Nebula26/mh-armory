@@ -1,15 +1,20 @@
-<form class="row">
-  <div class="input-field col s6">
+<div class="row">
+  <div class="input-field col s4">
     <mz-input-container>
-      <input mz-input id="search" placeholder="Search..." type="text"  (keyup)="changeText($event)">
+      <input mz-input id="search" placeholder="Search..." type="text" (keyup)="changeText($event)" [(ngModel)]="name">
     </mz-input-container>
   </div>
-  <div class="input-field col s6">
+  <div class="input-field col s4 mh-adjust-select">
     <mz-select-container>
-      <select mz-select id="options-select" [placeholder]="'Select bonus'"  (change)="changeSelect($event)">
+      <select mz-select id="options-select" [placeholder]="'Select bonus'"  (change)="changeSelect($event)" [(ngModel)]="bonus">
         <option *ngFor="let name of bonuses" class="left circle">{{name}}</option>
         <option class="left circle">Fire Resistance</option>
       </select>
     </mz-select-container>
   </div>
-</form>
+  <div class="input-field col s4">
+    <button mz-button class="right mh-adjust-button" id="buttonReset" (click)="resetFilter()">
+      Reset
+    </button>
+  </div>
+</div>

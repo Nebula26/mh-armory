@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
 import { FilterInterface } from '../../models/filter.interface';
 import { Bonus } from '../../data/bonus';
-
 
 @Component({
   selector: 'app-filter',
@@ -12,26 +11,40 @@ import { Bonus } from '../../data/bonus';
 export class FilterComponent implements OnInit {
 
   private filter: FilterInterface;
-  bonuses: Array<string> = new Bonus().getBonuses();
+  bonuses: Array<string>;
+  @Input() name: string;
+  @Input() bonus: string;
 
   constructor(private sharedService: SharedService) {
     this.filter = {
       name : '',
       bonus : ''
     };
+
+    this.bonuses = new Bonus().getBonuses();
   }
 
   ngOnInit() {
   }
 
-  changeText($event) {
-    this.filter.name = $event.target.value;
+  changeText() {
+    this.filter.name = this.name;
     this.sharedService.publishFilterEvent(this.filter);
    }
 
-  changeSelect($event) {
-    this.filter.bonus = $event.target.value;
+  changeSelect() {
+    this.filter.bonus = this.bonus;
     this.sharedService.publishFilterEvent(this.filter);
   }
 
+  resetFilter() {
+    this.name = '';
+    this.bonus = '';
+
+    this.filter = {
+      name : '',
+      bonus : ''
+    };
+    this.sharedService.publishFilterEvent(this.filter);
+  }
 }
