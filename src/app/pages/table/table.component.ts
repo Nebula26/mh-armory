@@ -11,12 +11,14 @@ import { FilterInterface } from '../../models/filter.interface';
 })
 export class TableComponent implements OnInit {
 
-  armor = Equip.equip;
+  armor: Array<any> = Equip.equip;
   chosenEquip = new Map<string, any>();
   filter: FilterInterface = {
     name : '',
     bonus : ''
   };
+  filteredArmor: Array<object>;
+  notFilteredArmor: Array<object>;
 
   constructor(private sharedService: SharedService, private route: ActivatedRoute) { }
 
@@ -24,6 +26,38 @@ export class TableComponent implements OnInit {
     this.sharedService.filterEvent$.subscribe(
       data => {
         this.filter = data;
+        this.filteredArmor = [];
+        this.notFilteredArmor = [];
+        const that = this;
+
+        if (this.filter.name === '' && this.filter.bonus === '') {
+          this.armor = Equip.equip;
+        } else {
+          for (const set of this.armor) {
+            if (this.filter.name !== '' && set.name.toLowerCase().indexOf(that.filter.name.toLowerCase()) !== -1) {
+              that.filteredArmor.push(set);
+            } else if (this.filter.bonus !== '') {
+              let found = false;
+              for (const piece of set.equip) {
+                const l = piece.bonus.filter(
+                  bonus => bonus.name.toLowerCase().indexOf(that.filter.bonus.toLowerCase()) !== -1
+                ).length;
+                if (l > 0) {
+                  found = true;
+                  break;
+                }
+              }
+              if (found) {
+                that.filteredArmor.push(set);
+              } else {
+                that.notFilteredArmor.push(set);
+              }
+            } else {
+              that.notFilteredArmor.push(set);
+            }
+          }
+          this.armor = this.filteredArmor.concat(this.notFilteredArmor);
+        }
       }
     );
 
