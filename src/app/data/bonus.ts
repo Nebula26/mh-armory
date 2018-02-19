@@ -22,6 +22,6 @@ export class Bonus {
   }
 
   getBonuses() {
-    return this.bonuses;
+    return this.bonuses.sort();
   }
 }
