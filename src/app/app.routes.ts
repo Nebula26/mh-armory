@@ -1,6 +1,6 @@
-import { TableComponent } from "./pages/table/table.component";
+import { TableComponent } from './pages/table/table.component';
 import { Routes, RouterModule } from '@angular/router';
-import { ModuleWithProviders } from "@angular/core";
+import { ModuleWithProviders } from '@angular/core';
 
 // Route Configuration
 export const routes: Routes = [
@@ -8,4 +8,4 @@ export const routes: Routes = [
     { path: '**', component: TableComponent },
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes); //{useHash: true });
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes); // {useHash: true });

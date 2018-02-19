@@ -8,8 +8,8 @@ import { FilterComponent } from './components/filter/filter.component';
 import { BonusDetailComponent } from './components/bonus-detail/bonus-detail.component';
 
 import { MzButtonModule, MzModalModule, MzIconModule, MzIconMdiModule } from 'ng2-materialize';
-import { TableComponent } from './pages/table/table.component'
-import { MzNavbarModule } from 'ng2-materialize'
+import { TableComponent } from './pages/table/table.component';
+import { MzNavbarModule } from 'ng2-materialize';
 import { SharedService } from './services/shared.service';
 import { MzInputModule } from 'ng2-materialize';
 import { MzSelectModule } from 'ng2-materialize';
@@ -40,7 +40,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     MzModalModule,
     FormsModule,
-    MzIconModule, 
+    MzIconModule,
     MzIconMdiModule,
     routing
   ],

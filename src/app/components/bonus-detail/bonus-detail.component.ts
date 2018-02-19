@@ -20,15 +20,15 @@ export class BonusDetailComponent implements OnInit {
   bonusEquip = undefined;
   filterKeys: Array<string>;
   bonusKey: Array<string>;
-  url:String = "";
+  url: String = '';
 
-  constructor(private sharedService:SharedService) {
+  constructor(private sharedService: SharedService) {
   }
 
   ngOnInit() {
     this.sharedService.chosenEquipEvent$.subscribe(
       data => {
-        if(data.size > 0) {
+        if (data.size > 0) {
           this.chosenEquip = data;
           this.filterKeys = Array.from(this.chosenEquip.keys());
           this.calcBonus();
@@ -40,22 +40,21 @@ export class BonusDetailComponent implements OnInit {
           this.bonusKey = undefined;
         }
       }
-    )
+    );
   }
 
-  calcBonus(){
+  calcBonus() {
     this.bonusEquip = new Map<string, number>();
-    this.bonusEquip.set("GEM_SMALL", 0)
-    this.bonusEquip.set("GEM_MEDIUM", 0)
-    this.bonusEquip.set("GEM_LARGE", 0)
+    this.bonusEquip.set('GEM_SMALL', 0);
+    this.bonusEquip.set('GEM_MEDIUM', 0);
+    this.bonusEquip.set('GEM_LARGE', 0);
 
-    this.chosenEquip.forEach((equip, name) =>
-      {
-        for (let bonus of equip.bonus) {
-          if(bonus.name){
-            if(!this.bonusEquip.has(bonus.name)){
+    this.chosenEquip.forEach(equip => {
+        for (const bonus of equip.bonus) {
+          if (bonus.name) {
+            if (!this.bonusEquip.has(bonus.name)) {
               this.bonusEquip.set(bonus.name, bonus.value);
-            }else{
+            } else {
               let value = this.bonusEquip.get(bonus.name);
               value += bonus.value;
               this.bonusEquip.set(bonus.name, value);
@@ -69,34 +68,34 @@ export class BonusDetailComponent implements OnInit {
     );
   }
 
-  calcSocket(socketType, socketValue){
+  calcSocket(socketType, socketValue) {
     let value = this.bonusEquip.get(socketType);
-    value += socketValue
+    value += socketValue;
     this.bonusEquip.set(socketType, value);
   }
 
-  getImageFromSocket(socketType){
-    let img = "";
-    switch(socketType){
+  getImageFromSocket(socketType) {
+    let img = '';
+    switch (socketType) {
       case BonusDetailComponent.GEM_SMALL:
-        img = "gem_small.png";
+        img = 'gem_small.png';
         break;
       case BonusDetailComponent.GEM_MEDIUM:
-        img = "gem_medium.png";
+        img = 'gem_medium.png';
         break;
       case BonusDetailComponent.GEM_LARGE:
-        img = "gem_large.png";
+        img = 'gem_large.png';
         break;
     }
     return img;
   }
 
-  exportUrl(){
-    let eq = {};
-    this.chosenEquip.forEach((value, key) =>{
+  exportUrl() {
+    const eq = {};
+    this.chosenEquip.forEach((value, key) => {
       eq[key] = value.id;
     });
-    this.url = "http://localhost:4200/";
+    this.url = 'http://localhost:4200/';
     this.url += btoa(JSON.stringify(eq));
     this.urlModal.open();
   }
