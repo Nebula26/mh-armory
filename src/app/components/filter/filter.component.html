@@ -7,7 +7,7 @@
   <div class="input-field col s6">
     <mz-select-container>
       <select mz-select id="options-select" [placeholder]="'Select bonus'"  (change)="changeSelect($event)">
-        <option class="left circle">Hunter Resistance</option>
+        <option *ngFor="let name of bonuses" class="left circle">{{name}}</option>
         <option class="left circle">Fire Resistance</option>
       </select>
     </mz-select-container>

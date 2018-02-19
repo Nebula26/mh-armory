@@ -2,6 +2,7 @@ import { Equip } from '../../data/equip';
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
 import { ActivatedRoute } from '@angular/router';
+import { FilterInterface } from '../../models/filter.interface';
 
 @Component({
   selector: 'app-table',
@@ -12,7 +13,10 @@ export class TableComponent implements OnInit {
 
   armor = Equip.equip;
   chosenEquip = new Map<string, any>();
-  filter: Object;
+  filter: FilterInterface = {
+    name : '',
+    bonus : ''
+  };
 
   constructor(private sharedService: SharedService, private route: ActivatedRoute) { }
 
@@ -65,16 +69,21 @@ export class TableComponent implements OnInit {
 
   }
 
-  /*toFilterByName(name) {
-    return this.filter && this.filter.name != '' && name.toLowerCase().indexOf(this.filter.name.toLowerCase()) != -1;
+  toFilterByName(name) {
+    const filterExist = this.filter;
+    const filterEmpty = this.filter.name === '';
+    const isToFilter = name.toLowerCase().indexOf(this.filter.name.toLowerCase()) !== -1;
+
+    return filterExist && !filterEmpty && isToFilter;
   }
 
   toFilterByBonus(bonuses) {
-    let that = this;
-    if (this.filter && this.filter.bonus != '') {
-      bonuses.filter(
-        bonus => bonus.name.toLowerCase().indexOf(that.filter.bonus.toLowerCase()) != -1
-      });
-     }
-  }*/
+    const that = this;
+    if (this.filter && this.filter.bonus !== '') {
+      const found = bonuses.filter(
+        bonus => bonus.name.toLowerCase().indexOf(that.filter.bonus.toLowerCase()) !== -1
+      );
+      return found.length > 0;
+    }
+  }
 }
