@@ -2,7 +2,7 @@ import { Equip } from './equip';
 
 export class Bonus {
   private armor = Equip.equip;
-  private bonuses: Array<string> = new Array();
+  private bonuses: Array<string> = [];
 
   constructor() {
     this.bonuses.push(this.armor[0].equip[0].bonus[0].name);
