@@ -24,7 +24,7 @@ export class TableComponent implements OnInit {
         this.filter = data;
       }
     );
-       
+
     this.route.params.subscribe(params => {
       if(params.id){
         this.importEquipFromUrl(params.id);
@@ -52,7 +52,7 @@ export class TableComponent implements OnInit {
     let equip = JSON.parse(atob(url));
     console.log(equip);
     for(let piece of this.armor){
-      let arr = piece.equip.filter(eq => eq.id === equip.helm || eq.id === equip.chest || 
+      let arr = piece.equip.filter(eq => eq.id === equip.helm || eq.id === equip.chest ||
                 eq.id === equip.hands || eq.id === equip.legs || eq.id === equip.boots);
       if(arr.length > 0){
         for(let a of arr){
@@ -72,7 +72,7 @@ export class TableComponent implements OnInit {
   }
 
   toFilterByName(name) {
-    //return this.filter && this.filter.name != '' && name.toLowerCase().indexOf(this.filter.name.toLowerCase()) != -1;
+    return this.filter && this.filter.name != '' && name.toLowerCase().indexOf(this.filter.name.toLowerCase()) != -1;
   }
 
   toFilterByBonus(bonuses) {
