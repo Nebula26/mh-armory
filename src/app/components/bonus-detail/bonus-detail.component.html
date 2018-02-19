@@ -5,7 +5,8 @@
         <span class="card-title">Bonus</span>
         <i class="card-export" mz-icon-mdi
           [align]="'right'"
-          [icon]="'open-in-new'"         
+          [icon]="'open-in-new'"  
+          (click)="exportUrl()"       
         >
         </i>
         <div *ngFor="let key of filterKeys" class="row mh-detail-row">
@@ -42,3 +43,15 @@
     </div>
   </div>
 </div>
+
+<mz-modal #urlModal [options]="modalOptions">
+    <mz-modal-header>
+      Copy URL
+    </mz-modal-header>
+    <mz-modal-content>
+      <input [ngModel]="url" type="text" onClick="this.select()">
+    </mz-modal-content>
+    <mz-modal-footer>
+      <button mz-button [flat]="true" mz-modal-close>Close</button>
+    </mz-modal-footer>
+</mz-modal>

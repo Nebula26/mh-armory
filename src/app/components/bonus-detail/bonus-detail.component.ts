@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { MzModalComponent } from 'ng2-materialize';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { SharedService } from '../../services/shared.service';
 
 @Component({
@@ -12,11 +13,14 @@ export class BonusDetailComponent implements OnInit {
   static GEM_MEDIUM = 'GEM_MEDIUM';
   static GEM_LARGE = 'GEM_LARGE';
 
+  @ViewChild('urlModal')
+  urlModal: MzModalComponent;
 
   @Input() chosenEquip;
   bonusEquip = undefined;
   filterKeys: Array<string>;
   bonusKey: Array<string>;
+  url:String = "";
 
   constructor(private sharedService:SharedService) {
   }
@@ -85,5 +89,15 @@ export class BonusDetailComponent implements OnInit {
         break;
     }
     return img;
+  }
+
+  exportUrl(){
+    let eq = {};
+    this.chosenEquip.forEach((value, key) =>{
+      eq[key] = value.id;
+    });
+    this.url = "http://localhost:4200/";
+    this.url += btoa(JSON.stringify(eq));
+    this.urlModal.open();
   }
 }

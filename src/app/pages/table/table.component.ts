@@ -10,16 +10,11 @@ import { MzModalComponent } from 'ng2-materialize';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  @ViewChild('urlModal')
-  urlModal: MzModalComponent;
-
 
   armor = Equip.equip;
   chosenEquip = new Map<string, any>();
   bonusEquip = new Map<string, number>();
   filter:Object;
-  //TODO SISTEMARE LA GESTIONE DELL'URL CHE FA SCHIFO E SPOSTARE EXPORT NEL DETAIL
-  url: string = "http://localhost:4200/";
 
   constructor(private sharedService:SharedService, private route:ActivatedRoute) { }
 
@@ -51,16 +46,6 @@ export class TableComponent implements OnInit {
       }
       this.sharedService.publishChosenEquipEvent(this.chosenEquip);
     }
-  }
-
-  exportUrl(){
-    let eq = {};
-    this.chosenEquip.forEach((value, key) =>{
-      eq[key] = value.id;
-    });
-    this.url = "http://localhost:4200/";
-    this.url += btoa(JSON.stringify(eq));
-    this.urlModal.open();
   }
 
   importEquipFromUrl(url){
