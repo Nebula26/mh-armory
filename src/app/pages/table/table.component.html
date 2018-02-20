@@ -14,7 +14,7 @@
       <tbody>
         <tr *ngFor="let armor of armor">
           <td [ngClass]="{'x-filtered' : toFilterByName(armor.name)}">{{armor.name}}</td>
-          <td *ngFor="let eq of armor.equip" (click)="armor.name != 'x' && toggle(eq)"
+          <td *ngFor="let eq of armor.equip" class="center" (click)="armor.name != 'x' && toggle(eq)"
             [ngClass]="{
               'grey lighten-2' : chosenEquip.has(eq.name) && chosenEquip.get(eq.name).id == eq.id,
               'x-filtered-bonus' : toFilterByBonus(eq.bonus)
@@ -27,15 +27,8 @@
                      - No bonus -
                   </ng-container>
               </div>
-            <div class="row row--no-margin">
-              <div class="col s4 center">{{eq.socket.small}}</div>
-              <div class="col s4 center">{{eq.socket.medium}}</div>
-              <div class="col s4 center">{{eq.socket.big}}</div>
-            </div>
-            <div class="row row--no-margin">
-              <div class="col s4 center text-11">Small</div>
-              <div class="col s4 center text-11">Medium</div>
-              <div class="col s4 center text-11">Large</div>
+            <div>
+              {{eq.socket.small}} - {{eq.socket.medium}} - {{eq.socket.big}}
             </div>
           </td>
         </tr>
